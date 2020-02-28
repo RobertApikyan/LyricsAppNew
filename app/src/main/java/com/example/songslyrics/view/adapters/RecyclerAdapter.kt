@@ -9,14 +9,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.songslyrics.R
-import com.example.songslyrics.model.ArtistHitsItem
-import com.example.songslyrics.model.ArtistResult
+import com.example.songslyrics.datamodel.SongsItem
+
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
-    private  var musicList: MutableList<ArtistHitsItem?> = mutableListOf()
+    private  var musicList: MutableList<SongsItem?> = mutableListOf()
 
 
-    fun setItem(list_of_music: List<ArtistHitsItem?>) {
+    fun setItem(list_of_music: List<SongsItem?>) {
         musicList.clear()
         musicList.addAll(list_of_music)
         notifyDataSetChanged()
@@ -35,7 +35,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        musicList[position]?.result?.let { holder.onBind(it) }
+      holder.onBind(musicList[position]!!)
+
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -51,7 +52,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             songName = itemView.findViewById(R.id.name_Song)
         }
 
-        fun onBind(requestItem: ArtistResult){
+        fun onBind(requestItem: SongsItem){
             artistImage.load(Uri.parse(requestItem.headerImageThumbnailUrl))
             backImage.load(Uri.parse(requestItem.songArtImageThumbnailUrl))
             artistName.text = requestItem.primaryArtist!!.name

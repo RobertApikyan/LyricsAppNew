@@ -6,11 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardView_s"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp">
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_here"
+        android:padding="10dp"
+        android:gravity="center"
+        android:maxLength="40"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:background="@drawable/edittext_style"/>
+  </androidx.cardview.widget.CardView>
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/recyclerView"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+      android:layout_height="0dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintTop_toBottomOf="@id/cardView_s"
+      android:layout_marginTop="10dp"
+      app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

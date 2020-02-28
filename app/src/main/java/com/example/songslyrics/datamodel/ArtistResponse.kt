@@ -1,12 +1,12 @@
-package com.example.songslyrics.model
+package com.example.songslyrics.datamodel
 
 import com.google.gson.annotations.SerializedName
 
-data class ArtistSearchResponce(
+data class ArtistResponse(
 
 	@field:SerializedName("meta")
 	val meta: Meta? = null,
 
 	@field:SerializedName("response")
-	val response: ArtistResponse? = null
+	val response: Response? = null
 )

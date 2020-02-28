@@ -1,8 +1,8 @@
-package com.example.songslyrics.model
+package com.example.songslyrics.datamodel
 
 import com.google.gson.annotations.SerializedName
 
-data class ArtistResult(
+data class SongsItem(
 
 	@field:SerializedName("lyrics_owner_id")
 	val lyricsOwnerId: Int? = null,
