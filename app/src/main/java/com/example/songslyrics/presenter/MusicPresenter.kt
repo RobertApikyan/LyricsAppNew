@@ -10,11 +10,13 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MusicPresenter(var musicView: MusicView):PresenterMusic {
-
+    // todo move to activity
     val adapterSong = RecyclerAdapter()
 
+    // todo config adapter in it's activity
     fun activityRegistr(){
         musicView.setSongsAdapter(adapterSong)
+        // todo call getMusicData from activity
         getMusicData()
     }
 
@@ -27,9 +29,13 @@ class MusicPresenter(var musicView: MusicView):PresenterMusic {
             override fun onResponse(call: Call<ArtistResponse>,
                 response: Response<ArtistResponse>
             ) {
+                // todo avoid force unwraps body().!! use instead body().?
                 if (response.isSuccessful){
                     val songs = response.body()!!.response!!.songs
                     if(songs != null){
+                        // todo move adapterSong in to MusicActivity
+                        // for sending data activity create MusicView method
+                        // (example musicView.onMusicData(songs))
                         adapterSong.setItem(songs)
                     }
 

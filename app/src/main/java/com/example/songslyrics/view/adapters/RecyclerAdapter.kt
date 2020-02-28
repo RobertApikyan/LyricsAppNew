@@ -15,13 +15,11 @@ import com.example.songslyrics.datamodel.SongsItem
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     private  var musicList: MutableList<SongsItem?> = mutableListOf()
 
-
     fun setItem(list_of_music: List<SongsItem?>) {
         musicList.clear()
         musicList.addAll(list_of_music)
         notifyDataSetChanged()
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -36,7 +34,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       holder.onBind(musicList[position]!!)
-
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -45,7 +42,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         private var artistName: TextView
         private var songName: TextView
         private var backImage: ImageView
+
         init {
+            // todo instead of findViewById() use kotlin view binding for ViewHoler
+            // read about view holder binding here, search for LayoutContainer - https://kotlinlang.org/docs/tutorials/android-plugin.html#layoutcontainer-support
             backImage = itemView.findViewById(R.id.back_image)
             artistImage = itemView.findViewById(R.id.circleImageView)
             artistName = itemView.findViewById(R.id.name_Artist)
@@ -57,8 +57,6 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             backImage.load(Uri.parse(requestItem.songArtImageThumbnailUrl))
             artistName.text = requestItem.primaryArtist!!.name
             songName.text = requestItem.title
-
-
         }
 
 

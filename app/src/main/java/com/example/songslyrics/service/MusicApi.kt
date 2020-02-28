@@ -8,6 +8,7 @@ import retrofit2.http.Headers
 
 interface MusicApi {
     @Headers("x-rapidapi-key: ${AppConstants.HEADER_END}")
+    // todo move endpoint from constant to anotation parameter
     @GET(AppConstants.END_POINT)
     fun getData():Call<ArtistResponse>
 }

@@ -7,6 +7,18 @@ import com.example.songslyrics.presenter.MusicPresenter
 import com.example.songslyrics.view.activities.MusicView
 import kotlinx.android.synthetic.main.activity_main.*
 
+// todo refactor the packaging structure as
+// constants
+// datamodel
+// interfaces
+// mvp
+    // activities
+    // fragments (may be added later)
+    // presenters
+    // views (mvp views)
+// repo
+// service
+
 class MainActivity : AppCompatActivity(), MusicView {
 
     val presentr = MusicPresenter(this)

@@ -4,6 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+<!--todo do not use ConstraintLayout with single child,
+    change parent layout with FrameLayout-->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
