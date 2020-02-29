@@ -7,12 +7,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-       // val apiClientInstance = get()
-     val apiClientInstance by lazy { get() }
-        val logging = HttpLoggingInterceptor().apply {
+      val apiClientCall = get().create(MusicApi::class.java).getArtistSongs()
+     //val apiClientInstance by lazy { get() }
+     private   val logging = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
-        val okHttp = OkHttpClient.Builder()
+       private val okHttp = OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
 

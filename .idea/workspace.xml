@@ -6,29 +6,30 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c35e82-b1cb-48f6-9e08-a473689fda0a" name="Default Changelist" comment="create MVP commit">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/card_view_style.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/ArtistResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/ArtistResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/Meta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Meta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/PrimaryArtist.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/PrimaryArtist.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/Response.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Response.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/SongsItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/SongsItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/datamodel/Stats.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Stats.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/presenter/MusicPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/presenters/MusicPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/presenter/Presenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/presenters/Presenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/ArtistResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/ArtistResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Meta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/Meta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/PrimaryArtist.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/PrimaryArtist.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Response.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/Response.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/SongsItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/SongsItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels/Stats.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/models/Stats.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/presenters/MusicPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/presenters/MusicPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/activities/MusicView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/activities/MusicView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/adapters/RecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/adapters/RecyclerAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/repo/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/repo/Repository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/service/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/service/ApiClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/service/MusicApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/service/MusicApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/view/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/view/activities/MusicView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/activities/MusicView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/view/adapters/RecyclerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/views/adapters/RecyclerAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recycler_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycler_item.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +54,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -62,15 +70,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/datamodels" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.songslyrics.mvp.activities" />
+      <recent name="com.example.songslyrics.adapters" />
       <recent name="com.example.songslyrics.mvp.presenters" />
       <recent name="com.example.songslyrics.mvp.views.adapters" />
       <recent name="com.example.songslyrics.mvp.views.activities" />
-      <recent name="com.example.songslyrics.mvp.datamodels" />
-      <recent name="com.example.songslyrics.view.activities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Desktop\SongsLyrics\app\src\main\java\com\example\songslyrics\mvp\datamodels" />
@@ -185,7 +196,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/songslyrics/mvp/presenters/MusicPresenter.kt</url>
-          <line>15</line>
+          <line>16</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

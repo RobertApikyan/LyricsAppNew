@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    xmlns:card_view="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        card_view:cardElevation="4dp"
+        android:layout_margin="6dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="6dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cons_lay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/back_image"
+                android:id="@+id/backImage"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
                 app:layout_constraintTop_toTopOf="@id/cons_lay" />
@@ -41,12 +45,12 @@
                 app:civ_border_color="@android:color/white"
                 app:civ_border_width="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/back_image"
+                app:layout_constraintStart_toStartOf="@+id/backImage"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.611" />
 
             <TextView
-                android:id="@+id/name_Song"
+                android:id="@+id/nameSong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -54,22 +58,22 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/back_image"
+                app:layout_constraintBottom_toBottomOf="@+id/backImage"
                 app:layout_constraintEnd_toEndOf="@+id/layer"
                 app:layout_constraintHorizontal_bias="0.211"
                 app:layout_constraintStart_toEndOf="@+id/circleImageView"
-                app:layout_constraintTop_toTopOf="@+id/back_image"
+                app:layout_constraintTop_toTopOf="@+id/backImage"
                 app:layout_constraintVertical_bias="0.418" />
 
             <TextView
-                android:id="@+id/name_Artist"
+                android:id="@+id/nameArtist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lionel Rich"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/back_image"
+                app:layout_constraintBottom_toBottomOf="@+id/backImage"
                 app:layout_constraintEnd_toEndOf="@+id/layer"
                 app:layout_constraintHorizontal_bias="0.243"
                 app:layout_constraintStart_toEndOf="@+id/circleImageView"
@@ -81,4 +85,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

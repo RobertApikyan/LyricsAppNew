@@ -1,4 +1,4 @@
-package com.example.songslyrics.mvp.views.adapters
+package com.example.songslyrics.adapters
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.songslyrics.R
-import com.example.songslyrics.mvp.datamodels.SongsItem
+import com.example.songslyrics.mvp.models.SongsItem
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 
@@ -41,11 +41,11 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun onBind(requestItem: SongsItem){
+        fun onBind(requestItem: SongsItem) {
             itemView.circleImageView.load(Uri.parse(requestItem.headerImageThumbnailUrl))
-            itemView.back_image.load(Uri.parse(requestItem.songArtImageThumbnailUrl))
-            itemView.name_Artist.text = requestItem.primaryArtist!!.name
-            itemView.name_Song.text = requestItem.title
+            itemView.backImage.load(Uri.parse(requestItem.songArtImageThumbnailUrl))
+            itemView.nameArtist.text = requestItem.primaryArtist!!.name
+            itemView.nameSong.text = requestItem.title
         }
     }
 }
