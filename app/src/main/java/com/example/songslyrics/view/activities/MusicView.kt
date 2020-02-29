@@ -1,10 +1,8 @@
 package com.example.songslyrics.view.activities
 
-import androidx.recyclerview.widget.RecyclerView
+import com.example.songslyrics.datamodel.SongsItem
 
 
 interface MusicView {
-
-    fun setSongsAdapter(adapter: RecyclerView.Adapter<*>)
-
+    fun setSongsData(musicList :List<SongsItem?>)
 }

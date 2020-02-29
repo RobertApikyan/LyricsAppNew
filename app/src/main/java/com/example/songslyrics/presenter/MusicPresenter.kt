@@ -9,16 +9,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MusicPresenter(var musicView: MusicView):PresenterMusic {
+class MusicPresenter(var musicView: MusicView): Presenter {
 
-    val adapterSong = RecyclerAdapter()
-
-    fun activityRegistr(){
-        musicView.setSongsAdapter(adapterSong)
-        getMusicData()
-    }
-
-    override fun getMusicData(){
+     fun getMusicData(){
         Repository.getMusic().enqueue(object :Callback<ArtistResponse>{
             override fun onFailure(call: Call<ArtistResponse>, t: Throwable) {
                 Log.d("Failure Data",t.message.toString())
@@ -28,9 +21,9 @@ class MusicPresenter(var musicView: MusicView):PresenterMusic {
                 response: Response<ArtistResponse>
             ) {
                 if (response.isSuccessful){
-                    val songs = response.body()!!.response!!.songs
+                    val songs = response.body()?.response!!.songs
                     if(songs != null){
-                        adapterSong.setItem(songs)
+                        musicView.setSongsData(songs)
                     }
 
                     Log.d("RESPONSE","RES---${songs}")
@@ -40,4 +33,5 @@ class MusicPresenter(var musicView: MusicView):PresenterMusic {
 
         })
     }
+
 }
