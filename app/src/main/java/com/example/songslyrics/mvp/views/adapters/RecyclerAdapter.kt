@@ -1,4 +1,4 @@
-package com.example.songslyrics.view.adapters
+package com.example.songslyrics.mvp.views.adapters
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.songslyrics.R
-import com.example.songslyrics.datamodel.SongsItem
+import com.example.songslyrics.mvp.datamodels.SongsItem
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 
@@ -26,7 +26,9 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
         val inflate =
             LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
-        return ViewHolder(inflate)
+        return ViewHolder(
+            inflate
+        )
     }
 
     override fun getItemCount(): Int {

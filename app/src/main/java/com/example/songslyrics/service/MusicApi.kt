@@ -1,7 +1,7 @@
 package com.example.songslyrics.service
 
 import com.example.songslyrics.constants.AppConstants
-import com.example.songslyrics.datamodel.ArtistResponse
+import com.example.songslyrics.mvp.datamodels.ArtistResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers

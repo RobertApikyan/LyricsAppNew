@@ -1,15 +1,15 @@
-package com.example.songslyrics.presenter
+package com.example.songslyrics.mvp.presenters
 
 import android.util.Log
-import com.example.songslyrics.datamodel.ArtistResponse
+import com.example.songslyrics.mvp.datamodels.ArtistResponse
 import com.example.songslyrics.repo.Repository
-import com.example.songslyrics.view.activities.MusicView
-import com.example.songslyrics.view.adapters.RecyclerAdapter
+import com.example.songslyrics.mvp.views.activities.MusicView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MusicPresenter(var musicView: MusicView): Presenter {
+class MusicPresenter(var musicView: MusicView):
+    Presenter {
 
      fun getMusicData(){
         Repository.getMusic().enqueue(object :Callback<ArtistResponse>{
@@ -18,7 +18,7 @@ class MusicPresenter(var musicView: MusicView): Presenter {
             }
 
             override fun onResponse(call: Call<ArtistResponse>,
-                response: Response<ArtistResponse>
+                                    response: Response<ArtistResponse>
             ) {
                 if (response.isSuccessful){
                     val songs = response.body()?.response!!.songs

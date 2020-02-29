@@ -1,11 +1,11 @@
-package com.example.songslyrics.view.activities
+package com.example.songslyrics.mvp.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.songslyrics.R
-import com.example.songslyrics.datamodel.SongsItem
-import com.example.songslyrics.presenter.MusicPresenter
-import com.example.songslyrics.view.adapters.RecyclerAdapter
+import com.example.songslyrics.mvp.datamodels.SongsItem
+import com.example.songslyrics.mvp.presenters.MusicPresenter
+import com.example.songslyrics.mvp.views.adapters.RecyclerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MusicView {
