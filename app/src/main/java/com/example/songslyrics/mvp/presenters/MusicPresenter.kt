@@ -16,6 +16,7 @@ class MusicPresenter(var musicView: MusicView): Presenter {
             override fun onFailure(call: Call<ArtistResponse>, t: Throwable) {
                 Log.d("Failure Data",t.message.toString())
                 musicView.onProgressEnable(false)
+                musicView.onError()
             }
 
             override fun onResponse(call: Call<ArtistResponse>,

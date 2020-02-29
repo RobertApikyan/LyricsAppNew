@@ -1,4 +1,4 @@
-package com.example.songslyrics.mvp.models.modelArtistSearch
+package com.example.songslyrics.mvp.models
 
 import com.google.gson.annotations.SerializedName
 

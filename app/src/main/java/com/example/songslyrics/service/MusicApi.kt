@@ -2,7 +2,6 @@ package com.example.songslyrics.service
 
 import com.example.songslyrics.constants.AppConstants
 import com.example.songslyrics.mvp.models.ArtistResponse
-import com.example.songslyrics.mvp.models.modelArtistSearch.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -13,5 +12,5 @@ interface MusicApi {
     @GET("artists/16775/songs")
     fun getArtistSongs():Call<ArtistResponse>
     @GET("search")
-    fun getSearchArtist(@Query("q") searchName:String):Call<SearchResponse>
+    fun getSearchArtist(@Query("q") searchName:String):Call<ArtistResponse>
 }

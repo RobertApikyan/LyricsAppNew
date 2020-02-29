@@ -6,5 +6,5 @@ import com.example.songslyrics.service.MusicApi
 import retrofit2.Call
 
 object Repository {
-    fun getMusic(): Call<ArtistResponse> = ApiClient.apiClientCall
+    fun getMusic(): Call<ArtistResponse> = ApiClient.apiClientInstance.getArtistSongs()
 }

@@ -1,9 +1,11 @@
 package com.example.songslyrics.mvp.activities
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.songslyrics.R
 import com.example.songslyrics.mvp.models.SongsItem
 import com.example.songslyrics.mvp.presenters.MusicPresenter
@@ -40,7 +42,14 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onError() {
-        Toast.makeText(this, "No internet connection", Toast.LENGTH_LONG).show()
+       val builder = AlertDialog.Builder(this)
+        builder.setTitle("SOMETHING WENT WRONG")
+        builder.setMessage("Error(")
+        builder.setPositiveButton("OK"){dialog, which->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
 
