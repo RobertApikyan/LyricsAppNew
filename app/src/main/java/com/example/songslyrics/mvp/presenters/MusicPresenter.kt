@@ -12,11 +12,16 @@ class MusicPresenter(var musicView: MusicView):
     Presenter {
 
      fun getMusicData(){
+         // todo add some progress callbacks
+         // example musicView.onProgressEnabled(true)
         Repository.getMusic().enqueue(object :Callback<ArtistResponse>{
             override fun onFailure(call: Call<ArtistResponse>, t: Throwable) {
                 // todo in case of error some error dialog with musicView
                 // example: musicView.onError(), implement onError() method from activity side
                 Log.d("Failure Data",t.message.toString())
+
+                // todo add some progress callbacks
+                // example musicView.onProgressEnabled(false)
             }
 
             override fun onResponse(call: Call<ArtistResponse>,
@@ -31,7 +36,8 @@ class MusicPresenter(var musicView: MusicView):
 
                     Log.d("RESPONSE","RES---${songs}")
                 }
-
+                // todo add some progress callbacks
+                // example musicView.onProgressEnabled(false)
             }
 
         })

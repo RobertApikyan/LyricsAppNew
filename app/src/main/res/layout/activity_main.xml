@@ -6,12 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mvp.views.activities.MainActivity">
+
   <androidx.cardview.widget.CardView
       android:id="@+id/cardView_s"
       app:layout_constraintTop_toTopOf="parent"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp">
+
+    <!--todo remove search edit text, it will be needed
+     in artist search page-->
+
     <EditText
         android:id="@+id/search_et"
         android:layout_width="match_parent"

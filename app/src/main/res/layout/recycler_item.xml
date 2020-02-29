@@ -7,18 +7,21 @@
 <!--todo do not use ConstraintLayout with single child,
     change parent layout with FrameLayout-->
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
+<!--todo add some rounding and shadow to card view-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cons_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
-
+<!--todo prefer to use view id values with camel case.
+    example: back_image-> backImage -->
             <ImageView
                 android:id="@+id/back_image"
                 android:layout_width="match_parent"

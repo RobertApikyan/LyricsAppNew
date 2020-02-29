@@ -7,7 +7,17 @@ import com.example.songslyrics.mvp.datamodels.SongsItem
 import com.example.songslyrics.mvp.presenters.MusicPresenter
 import com.example.songslyrics.mvp.views.adapters.RecyclerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-
+// todo package refactor is not correct make packages as shown below
+// constants
+// dataModel (could be renamed to model)
+// adapters
+// repos
+// services
+// mvp^
+//      activities
+//      fragments
+//      presenters
+//      views
 class MainActivity : AppCompatActivity(), MusicView {
     // todo make attention on access modifier warnings
     // here could be private presenter
