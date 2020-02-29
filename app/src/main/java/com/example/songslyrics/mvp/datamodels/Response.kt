@@ -1,4 +1,4 @@
-package com.example.songslyrics.datamodel
+package com.example.songslyrics.mvp.datamodels
 
 import com.google.gson.annotations.SerializedName
 
@@ -9,4 +9,5 @@ data class Response(
 
 	@field:SerializedName("songs")
 	val songs: List<SongsItem?>? = null
+
 )
