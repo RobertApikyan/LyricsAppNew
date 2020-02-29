@@ -9,5 +9,6 @@ import retrofit2.http.Headers
 interface MusicApi {
     @Headers("x-rapidapi-key: ${AppConstants.HEADER_END}")
     @GET("artists/16775/songs")
+    // todo rename getData() method name to more descriptive, example 'getArtists'
     fun getData():Call<ArtistResponse>
 }

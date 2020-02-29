@@ -9,7 +9,8 @@ import com.example.songslyrics.mvp.views.adapters.RecyclerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MusicView {
-
+    // todo make attention on access modifier warnings
+    // here could be private presenter
     val presentr = MusicPresenter(this)
     val adapterSong = RecyclerAdapter()
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), MusicView {
         recyclerInit()
     }
 
+    // todo make attention on access modifier warnings
     fun recyclerInit(){
         recyclerView.adapter = adapterSong
     }
@@ -27,6 +29,4 @@ class MainActivity : AppCompatActivity(), MusicView {
     override fun setSongsData(musicList: List<SongsItem?>) {
         adapterSong.setItem(musicList)
     }
-
-
 }

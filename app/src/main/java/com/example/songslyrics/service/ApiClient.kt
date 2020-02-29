@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
        // val apiClientInstance = get()
+    // todo call create here get().create()
      val apiClientInstance by lazy { get() }
         val logging = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY

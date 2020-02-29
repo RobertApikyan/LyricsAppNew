@@ -9,4 +9,5 @@ data class Response(
 
 	@field:SerializedName("songs")
 	val songs: List<SongsItem?>? = null
+
 )

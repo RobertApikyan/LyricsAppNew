@@ -14,6 +14,8 @@ class MusicPresenter(var musicView: MusicView):
      fun getMusicData(){
         Repository.getMusic().enqueue(object :Callback<ArtistResponse>{
             override fun onFailure(call: Call<ArtistResponse>, t: Throwable) {
+                // todo in case of error some error dialog with musicView
+                // example: musicView.onError(), implement onError() method from activity side
                 Log.d("Failure Data",t.message.toString())
             }
 
@@ -21,6 +23,7 @@ class MusicPresenter(var musicView: MusicView):
                                     response: Response<ArtistResponse>
             ) {
                 if (response.isSuccessful){
+                    // todo avoid response!!.songs force unwrap instead use response?.songs
                     val songs = response.body()?.response!!.songs
                     if(songs != null){
                         musicView.setSongsData(songs)

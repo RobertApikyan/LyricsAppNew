@@ -6,5 +6,7 @@ import com.example.songslyrics.service.MusicApi
 import retrofit2.Call
 
 object Repository {
+
+    // todo do not create service instance for every call, for now move create(MusicApi::class.java) in to ApiClient
     fun getMusic(): Call<ArtistResponse> = ApiClient.apiClientInstance.create(MusicApi::class.java).getData()
 }
