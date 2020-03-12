@@ -7,15 +7,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.songslyrics.R
-import com.example.songslyrics.mvp.models.SongsItem
+import com.example.songslyrics.mvp.models.HitsItem
 import kotlinx.android.synthetic.main.recycler_item.view.*
 
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
-    private  var musicList: MutableList<SongsItem?> = mutableListOf()
+    private  var musicList: MutableList<HitsItem?> = mutableListOf()
 
 
-    fun setItem(list_of_music: List<SongsItem?>) {
+    fun setItem(list_of_music: List<HitsItem?>) {
         musicList.clear()
         musicList.addAll(list_of_music)
         notifyDataSetChanged()
@@ -41,11 +41,11 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun onBind(requestItem: SongsItem) {
-            itemView.circleImageView.load(Uri.parse(requestItem.headerImageThumbnailUrl))
-            itemView.backImage.load(Uri.parse(requestItem.songArtImageThumbnailUrl))
-            itemView.nameArtist.text = requestItem.primaryArtist!!.name
-            itemView.nameSong.text = requestItem.title
+        fun onBind(requestItem: HitsItem) {
+            itemView.circleImageView.load(Uri.parse(requestItem.result?.headerImageThumbnailUrl))
+            itemView.backImage.load(Uri.parse(requestItem.result?.songArtImageThumbnailUrl))
+            itemView.nameArtist.text = requestItem.result?.primaryArtist!!.name
+            itemView.nameSong.text = requestItem.result.title
         }
     }
 }

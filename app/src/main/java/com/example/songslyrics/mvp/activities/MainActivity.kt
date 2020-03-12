@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun setSongsData(musicList: List<SongsItem?>) {
-        adapterSong.setItem(musicList)
+      //  adapterSong.setItem(musicList)
     }
 
     override fun onProgressEnable(value: Boolean) {

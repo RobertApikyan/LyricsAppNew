@@ -22,15 +22,15 @@ class MusicPresenter(var musicView: MusicView): Presenter {
             override fun onResponse(call: Call<ArtistResponse>,
                                     response: Response<ArtistResponse>
             ) {
-                if (response.isSuccessful){
-                    val songs = response.body()?.response?.songs
-                    if(songs != null){
-                        musicView.setSongsData(songs)
-                    }
-
-                    Log.d("RESPONSE","RES---${songs}")
-                    musicView.onProgressEnable(false)
-                }
+//                if (response.isSuccessful){
+//                    val songs = response.body()?.response?.songs
+//                    if(songs != null){
+//                        musicView.setSongsData(songs)
+//                    }
+//
+//                    Log.d("RESPONSE","RES---${songs}")
+//                    musicView.onProgressEnable(false)
+//                }
 
             }
 
